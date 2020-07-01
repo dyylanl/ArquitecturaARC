@@ -6,7 +6,7 @@
 	.begin
 	.org 2048
 		ld	[address], %r1
-		addcc	%r2, 20, %r2		! Espacio del array
+		addcc	%r2, 80, %r2		! Espacio del array
 		andcc	%r3, %r0, %r3		! Indice en 0
 loop:		andcc	%r2, %r2, %r0		! Comparo bit a bit para seguir cargando datos o terminar si no tiene mas espacio
 		be done			! Si el r2 es 0 no hay mas espacio, el programa termina
