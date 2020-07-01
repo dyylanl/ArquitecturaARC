@@ -16,7 +16,7 @@ loop:		andcc	%r2, %r2, %r0		! Comparo bit a bit para seguir cargando datos o ter
 negativo:	st	%r1,[x+indice]		! Cargo el elemento de r1 que es negativo en la posicon del array[x+i]
 		addcc	%r3, 4, %r3		! Actualizo el indice del array ya que se cargo un elemento.
 		st	%r3, [indice]		! Cargo el indice actualizado.
-		subcc	%r2, 1, %r2		! Actualizo el espacio que le queda al array
+		subcc	%r2, 4, %r2		! Actualizo el espacio que le queda al array
 		ba loop			! Regreso a comprobar si queda espacio para seguir cargando datos
 done:		jmpl	%r15 + 4, %r0
 
